@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.homepage      = "http://dev.getresponse.com"
   s.summary       = "Ruby wrapper for GetResponse API"
   s.description   = "With this gem you can manage your subscribers, campaigns, messages etc."
-  s.version       = "0.6"
+  s.version       = "0.6.1"
 
   s.add_dependency "json"
   s.add_dependency "json_pure"
