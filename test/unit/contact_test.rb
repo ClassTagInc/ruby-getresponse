@@ -1,15 +1,11 @@
 require File.expand_path(File.join(File.dirname(__FILE__), '../test_helper'))
 
 class ContactTest < Test::Unit::TestCase
-
-  include RR::Adapters::TestUnit
-
-
   def setup
     @gr_connection = GetResponse::Connection.new("my_secret_api_key")
     @mocked_response = mock
     mock(@mocked_response).code.any_times { 200 }
-    mock(Net::HTTP).start("api2.getresponse.com", 80).any_times { @mocked_response }
+    mock(Net::HTTP).start("api.getresponse.com", 443).any_times { @mocked_response }
   end
 
 
@@ -255,7 +251,7 @@ class ContactTest < Test::Unit::TestCase
 
 
   def satisfy_mocks
-    Net::HTTP.start("api2.getresponse.com", 80)
+    Net::HTTP.start("api.getresponse.com", 443)
   end
 
 

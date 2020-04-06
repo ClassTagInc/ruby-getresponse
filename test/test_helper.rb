@@ -1,15 +1,12 @@
 # encoding: utf-8
 require "test/unit"
 require File.join(File.dirname(__FILE__), "../lib/get_response")
-require 'rr'
+require 'test/unit/rr'
 
 # Test helper methods
 
 
 class Test::Unit::TestCase
-
-  include RR::Adapters::TestUnit
-
 
   protected
 
